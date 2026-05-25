@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chambal Store</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>CHAMBAL STORE</h1>
+    <p>Premium Digital Products</p>
+  </header>
+
+  <section class="products">
+
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968672.png">
+
+      <h2>Shein Premium Code</h2>
+
+      <p class="price">₹99</p>
+
+      <button onclick="openPayment('Shein Premium Code',99)">
+        Buy Now
+      </button>
+    </div>
+
+
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png">
+
+      <h2>Website Source Code</h2>
+
+      <p class="price">₹199</p>
+
+      <button onclick="openPayment('Website Source Code',199)">
+        Buy Now
+      </button>
+    </div>
+
+
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968528.png">
+
+      <h2>Gaming Panel</h2>
+
+      <p class="price">₹299</p>
+
+      <button onclick="openPayment('Gaming Panel',299)">
+        Buy Now
+      </button>
+    </div>
+
+  </section>
+
+
+  <div class="popup hidden" id="paymentPopup">
+
+    <div class="popup-box">
+
+      <span class="close" onclick="closePayment()">×</span>
+
+      <h2 id="productName"></h2>
+
+      <h3 id="productPrice"></h3>
+
+      <img src="assets/qr.png" class="qr">
+
+      <p class="upi">UPI ID: vivek@upi</p>
+
+      <input type="text" id="username" placeholder="Enter Your Telegram Username">
+
+      <button onclick="paymentDone()">
+        I Have Paid
+      </button>
+
+      <h3 id="timer"></h3>
+
+      <div id="status"></div>
+
+      <div id="deliveryCode"></div>
+
+    </div>
+
+  </div>
+
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+<script src="firebase.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
